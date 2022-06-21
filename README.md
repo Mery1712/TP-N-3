@@ -314,10 +314,11 @@ int main() {
 
 ---
 
+<br>
 
 
+# **Exercice 3**
 
-#**Exercice 3** 
 On souhaite gérer les tâches d'un projet à l'aide d'une liste chainée simple. Une tâche est caractérisée par les
 informations suivantes :
 • Nom : Le nom de la tache (chaine de caractères)
