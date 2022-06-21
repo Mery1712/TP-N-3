@@ -221,7 +221,8 @@ typedef struct maillon {
 
 > **Écrire une fonction CreerMaillon qui permet de réserver l'espace mémoire pour un maillon, la fonction
 retourne l'adresse du maillon créé**
-<br>
+
+```java script
 
 /* 2. Ecrire une fonction CreerMaillon qui permet reserver l'espace memoire pour un maillon, la fonction retourne l'adresse du maillon cree. */
 Maillon * CreerMaillon (int V) {
@@ -233,5 +234,72 @@ Maillon * CreerMaillon (int V) {
     }
     return m;
 }
-```java script
+```
+<br>
+
+
+
+> **Écrire une fonction DernierElement qui permet de retourner l'adresse du dernier maillon de la liste**
+<br>
+
+
+```java script*
+/* 3. Ecrire une fonction DernierElement qui permet de retourner l'adresse du dernier maillon de la liste. */
+Maillon* DernierElement (Maillon *L) {
+
+    Maillon *m;
+
+    if( L == NULL )
+        return NULL;
+
+    else {
+        m = L;
+
+        while ( m->suivant != L )
+            m = m->suivant;
+        return m;
+    }
+}
+
+```
+<br>
+
+
+
+> **Écrire une fonction InsererFin qui permet d'insérer un élément V à la fin de la liste**
+<br>
+
+
+```java script*
+
+/* 4. Ecrire une fonction InsererFin qui permet d'insÃ©rer un Ã©lÃ©ment V Ã  la fin de la liste. */
+void InsererFin (Maillon * L, int V ) {
+
+    Maillon *m, *ptr ;
+    m = CreerMaillon (V) ;
+
+    if ( m != NULL ) {
+        if ( L == NULL ) {
+            L = m;
+            m->suivant = L;
+        }
+
+        else {
+            ptr = DernierElement (L);
+            ptr->suivant = m;
+            m->suivant = L;
+        }
+    }
+}
+
+
+
+
+int main() {
+
+    Maillon * Liste;
+    printf("Hello, World!\n");
+    return 0;
+}
+
 
