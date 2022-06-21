@@ -1,7 +1,8 @@
 # **Algorithmique et programmation avancée**
 
 ##  Objectif : Listes chainées
-Exercice 1 
+# **Exercice 1 **
+
 On se propose de réaliser un programme C qui permet de gérer, à l'aide d'une liste chainée, les étudiants ayant
 passé le contrôle unifié. La structure représentant l'étudiant est définie par :
 typedef struct etudiant {
@@ -39,7 +40,7 @@ typedef struct maillon {
 ```java script
 
 
-/* 2. Ecrire une fonction InsererFin qui permet d'insÃ©rer un Ã©tudiant E Ã  la fin de la liste. */
+/* 2. Ecrire une fonction InsererFin qui permet d'inserer un etudiant E Ã  la fin de la liste. */
 int InsererFin (Maillon * L, Etudiant E) {
     Maillon *m, *ptr;
     m = (Maillon*)malloc(sizeof (Maillon) );
@@ -279,7 +280,7 @@ Maillon* DernierElement (Maillon *L) {
 
 ```java script*
 
-/* 4. Ecrire une fonction InsererFin qui permet d'insÃ©rer un Ã©lÃ©ment V Ã  la fin de la liste. */
+/* 4. Ecrire une fonction InsererFin qui permet d'inserer un element V Ã  la fin de la liste. */
 void InsererFin (Maillon * L, int V ) {
 
     Maillon *m, *ptr ;
@@ -315,7 +316,7 @@ int main() {
 
 <br>
 
-Exercice 3
+#**Exercice 3 **
 On souhaite gérer les tâches d'un projet à l'aide d'une liste chainée simple. Une tâche est caractérisée par les
 informations suivantes :
 • Nom : Le nom de la tache (chaine de caractères)
@@ -364,7 +365,7 @@ retourner l'adresse du maillon cree**
 
 
 ```java script*
-/* 2. Ecrire une fonction CreerMaillon qui permet de crÃ©er un Maillon Ã  partir d'une tÃ¢che T, la fonction doit retourner l'adresse du maillon crÃ©Ã©. */
+/* 2. Ecrire une fonction CreerMaillon qui permet de creer un Maillon Ã  partir d'une tache T, la fonction doit retourner l'adresse du maillon cree. */
 
 void InsererDebut (Maillon * L,Tache T) {
     Maillon *m ;
@@ -385,7 +386,7 @@ void InsererDebut (Maillon * L,Tache T) {
 
 
 ```java script*
-/* 3. Ecrire une fonction InsererDebut qui permet d'ajouter une tÃ¢che T au dÃ©but de la liste. */
+/* 3. Ecrire une fonction InsererDebut qui permet d'ajouter une tache T au debut de la liste. */
 
 void InsererOrdonnee (Maillon * L, Tache T ) {
     Maillon *m, *pred, *par ;
@@ -417,7 +418,7 @@ après l'insertion de T**
 <br>
 
 
-```java script*/* 4. Ecrire une fonction InsererOrdonnee qui permet d'ajouter une tÃ¢che T Ã  la liste. La liste doit Ãªtre ordonnÃ©e aprÃ¨s l'insertion de T. */
+```java script*/* 4. Ecrire une fonction InsererOrdonnee qui permet d'ajouter une tache T Ã  la liste. La liste doit Ãªtre ordonnee aprÃ¨s l'insertion de T. */
 
 void AfficherTachePrioritaire (Maillon *L) {
     Tache tmax;
