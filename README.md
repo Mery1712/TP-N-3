@@ -1,7 +1,7 @@
 # **Algorithmique et programmation avancée**
 
 ##  Objectif : Listes chainées
-<br>
+
 # **Exercice 1 **
 
 On se propose de réaliser un programme C qui permet de gérer, à l'aide d'une liste chainée, les étudiants ayant
@@ -461,6 +461,6 @@ int main() {
 <br>
 
 ---
-<br>
+
 # ** Merci**
 
