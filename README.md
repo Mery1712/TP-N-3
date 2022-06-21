@@ -302,4 +302,150 @@ int main() {
     return 0;
 }
 
+Exercice 3
+On souhaite gérer les tâches d'un projet à l'aide d'une liste chainée simple. Une tâche est caractérisée par les
+informations suivantes :
+• Nom : Le nom de la tache (chaine de caractères)
+• Durée : La durée d'une tache (nombre de jours : type entier)
+• Priorité : La priorité d'une tache (entier) (la valeur la plus grande représente la priorité la plus élevée).
+On suppose que la liste chainée est ordonnée selon la durée.
+
+<br>
+<br>
+
+> **Définir les structures : Tache, Maillon et Liste**
+
+```java script
+
+/* 1. DÃ©finir les structures Maillon et Liste. */
+
+typedef struct {
+    char nom[20];
+    int duree;
+    int priorite;
+} Tache ;
+
+typedef struct maillon {
+    Tache tach;
+    struct maillon * suivant;
+} Maillon;
+
+Maillon* CreerMaillon (Tache T) {
+    Maillon *m;
+    m = (Maillon*)malloc(sizeof(Maillon));
+
+    if ( m != NULL ) {
+        m->tach = T;
+        m->suivant = NULL;
+    }
+    return m;
+}
+```
+<br>
+
+
+
+> **Écrire une fonction CreerMaillon qui permet de créer un Maillon à partir d'une tâche T, la fonction doit
+retourner l'adresse du maillon cree**
+<br>
+
+
+```java script*
+/* 2. Ecrire une fonction CreerMaillon qui permet de crÃ©er un Maillon Ã  partir d'une tÃ¢che T, la fonction doit retourner l'adresse du maillon crÃ©Ã©. */
+
+void InsererDebut (Maillon * L,Tache T) {
+    Maillon *m ;
+    m = CreerMaillon(T);
+
+    if ( m != NULL ) {
+        m->suivant = L;
+        L = m;
+    }
+}
+```
+<br>
+
+
+
+> **Écrire une fonction InsererDebut qui permet d'ajouter une tâche T au début de la liste**
+<br>
+
+
+```java script*
+/* 3. Ecrire une fonction InsererDebut qui permet d'ajouter une tÃ¢che T au dÃ©but de la liste. */
+
+void InsererOrdonnee (Maillon * L, Tache T ) {
+    Maillon *m, *pred, *par ;
+
+    if( L == NULL || L->tach.duree  >  T.duree )
+        InsererDebut( L, T);
+
+    else {
+        m = creerMaillon (T);
+        if( m != NULL) {
+            par = L->suivant;
+            pred = L;
+            while ( par != NULL  && par-> tach.duree <  T.duree) {
+                pred = par ;
+                par = par->suivant;
+            }
+            m->suivant = par ;
+            pred->suivant = m;
+        }
+    }
+}
+```
+<br>
+
+
+
+> **Écrire une fonction InsererOrdonnee qui permet d'ajouter une tâche T à la liste. La liste doit être ordonnée
+après l'insertion de T**
+<br>
+
+
+```java script*/* 4. Ecrire une fonction InsererOrdonnee qui permet d'ajouter une tÃ¢che T Ã  la liste. La liste doit Ãªtre ordonnÃ©e aprÃ¨s l'insertion de T. */
+
+void AfficherTachePrioritaire (Maillon *L) {
+    Tache tmax;
+    Maillon * ptr;
+
+    if ( L == NULL)
+        printf("Erreur : la liste est vide") ;
+    else {
+        tmax = L->tach ;
+        ptr = L;
+        while ( ptr != NULL) {
+            if( ptr->tach.priorite > tmax.priorite )
+                tmax = ptr->tach;
+            ptr = ptr->suivant ;
+        }
+        printf("La tÃ¢che la plus prioritaire est : \n la tÃ¢che intitulÃ©e %s n de durÃ©e %d \n et de prioritÃ© %d\n", tmax.nom, tmax.duree, tmax.priorite );
+    }
+}
+
+
+
+int main() {
+
+    Maillon * Liste;
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+
+---
+
+
+<br>
+
+
+## **Réalisé par :Meryem JOUIHRI (RC)**
+## **Encadré par : Mr.AMAMOU Ahmed**
+
+<br>
+
+---
+
+# ** Merci**
 
