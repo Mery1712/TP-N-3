@@ -196,6 +196,13 @@ int main() {
     printf("Hello, World!\n");
     return 0;
 }
+```
+
+---
+
+
+<br>
+
 
 Exercice 2
 On propose d'implémenter une liste circulaire d'entiers. Une liste circulaire est une liste chainée avec la particularité
