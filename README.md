@@ -1,7 +1,7 @@
 # **Algorithmique et programmation avancée**
 
 ##  Objectif : Listes chainées
-
+Exercice 1 
 On se propose de réaliser un programme C qui permet de gérer, à l'aide d'une liste chainée, les étudiants ayant
 passé le contrôle unifié. La structure représentant l'étudiant est définie par :
 typedef struct etudiant {
@@ -197,7 +197,41 @@ int main() {
     return 0;
 }
 
+Exercice 2
+On propose d'implémenter une liste circulaire d'entiers. Une liste circulaire est une liste chainée avec la particularité
+que le dernier élément pointe sur le premier élément (tête de la liste).
+Exemple : une liste chainée circulaire L
+
+<br>
+<br>
+
+> **Définir les structures Maillon et Liste**
+
+```java script
+/* 1. Definir les structures Maillon et Liste. */
+
+typedef struct maillon {
+    int valeur;
+    struct maillon * suivant;
+} Maillon;
+```
+<br>
 
 
 
+> **Écrire une fonction CreerMaillon qui permet de réserver l'espace mémoire pour un maillon, la fonction
+retourne l'adresse du maillon créé**
+<br>
+
+/* 2. Ecrire une fonction CreerMaillon qui permet reserver l'espace memoire pour un maillon, la fonction retourne l'adresse du maillon cree. */
+Maillon * CreerMaillon (int V) {
+    Maillon *m ;
+    m = (Maillon*) malloc(sizeof(Maillon));
+    if( m != NULL ) {
+        m->valeur = V ;
+        m->suivant=NULL;
+    }
+    return m;
+}
+```java script
 
