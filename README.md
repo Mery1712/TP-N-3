@@ -204,7 +204,7 @@ int main() {
 <br>
 
 
-Exercice 2
+** Merci** ex2
 On propose d'implémenter une liste circulaire d'entiers. Une liste circulaire est une liste chainée avec la particularité
 que le dernier élément pointe sur le premier élément (tête de la liste).
 Exemple : une liste chainée circulaire L
@@ -308,6 +308,12 @@ int main() {
     printf("Hello, World!\n");
     return 0;
 }
+```
+
+---
+
+
+<br>
 
 Exercice 3
 On souhaite gérer les tâches d'un projet à l'aide d'une liste chainée simple. Une tâche est caractérisée par les
