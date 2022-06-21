@@ -2,7 +2,7 @@
 
 ##  Objectif : Listes chainées
 
-# **Exercice 1 **
+# Exercice 1 
 
 On se propose de réaliser un programme C qui permet de gérer, à l'aide d'une liste chainée, les étudiants ayant
 passé le contrôle unifié. La structure représentant l'étudiant est définie par :
@@ -315,7 +315,7 @@ int main() {
 ---
 
 
-<br>
+
 
 #**Exercice 3 **
 On souhaite gérer les tâches d'un projet à l'aide d'une liste chainée simple. Une tâche est caractérisée par les
@@ -332,7 +332,7 @@ On suppose que la liste chainée est ordonnée selon la durée.
 
 ```java script
 
-/* 1. DÃ©finir les structures Maillon et Liste. */
+/* 1. Definir les structures Maillon et Liste. */
 
 typedef struct {
     char nom[20];
